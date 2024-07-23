@@ -4,7 +4,7 @@ const projectData = [
         image: '/NotesON.jpg',
         title: 'NotesON',
         description: 'A simple website that provides Notes to our first year students in GEC Bilaspur.',
-        link: 'https://github.com/gechelpfull/NotesON/',
+        link: 'https://github.com/Gaurav-Soni24/notesON',
         liveLink: 'https://bit.ly/NOTESON'
     },
     {
