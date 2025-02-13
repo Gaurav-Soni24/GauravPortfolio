@@ -18,7 +18,7 @@ const Skill = () => {
 
     return (
         <motion.div
-            className="flex flex-col items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16"
+            className="flex flex-col items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 w-full"
             id="Skill"
         >
             {/* Skill Typing Animation */}

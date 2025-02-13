@@ -29,7 +29,7 @@ export default function Contact() {
     }
 
     return (
-        <div className="text-black flex flex-col lg:flex-row justify-around items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16" id='Contact'>
+        <div className="text-black flex flex-col lg:flex-row justify-around items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 w-full" id='Contact'>
             {/* Left Section - Contact Info */}
             <motion.div 
                 initial={{ opacity: 0, x: -50 }} 
