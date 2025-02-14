@@ -36,18 +36,18 @@ const projects = [
     "owner": "Gaurav Soni"
   },
   {
-    "image": "/assets/projects/Portfolio.png",
-    "name": "My Portfolio",
-    "description": "A personal portfolio website showcasing my projects, skills, and experience.",
-    "features": [
-      "Responsive design for all devices",
-      "Interactive project gallery with project details",
-      "Contact form integrated with Web3Forms"
+    image: "/assets/projects/NotesON.png",
+    name: "NotesON",
+    description: "A dynamic web application for managing handwritten notes with an intuitive and seamless user experience.",
+    features: [
+      "Real-time data handling with MongoDB",
+      "Responsive and user-friendly design",
+      "Optimized performance with Next.js"
     ],
-    "techStack": ["NextJS", "TypeScript", "Tailwind CSS", "Web3Forms"],
-    "liveLink": "https://gaurav-portfolio-rho.vercel.app/",
-    "repoLink": "https://github.com/Gaurav-Soni24/GauravPortfolio",
-    "owner": "Gaurav Soni"
+    techStack: ["ReactJS", "NextJS", "MongoDB", "JSX"],
+    liveLink: "https://notes-on.vercel.app/",
+    repoLink: "https://github.com/Gaurav-Soni24/noteson", // Replace with actual repo
+    owner: "Gaurav Soni"
   },
   {
     image: "/assets/projects/TextUtils.png",
@@ -64,20 +64,6 @@ const projects = [
     owner: "Gaurav Soni",
   },
   {
-    image: "/assets/projects/NotesON.png",
-    name: "NotesON",
-    description: "A dynamic web application for managing handwritten notes with an intuitive and seamless user experience.",
-    features: [
-      "Real-time data handling with MongoDB",
-      "Responsive and user-friendly design",
-      "Optimized performance with Next.js"
-    ],
-    techStack: ["ReactJS", "NextJS", "MongoDB", "JSX"],
-    liveLink: "https://notes-on.vercel.app/",
-    repoLink: "https://github.com/Gaurav-Soni24/noteson", // Replace with actual repo
-    owner: "Gaurav Soni"
-  },
-  {
     "image": "/assets/projects/DrawingBoard.png",
     "name": "Drawing Board",
     "description": "A simple and interactive drawing board application that allows users to draw, erase, and customize their artwork using HTML5 Canvas.",
@@ -89,6 +75,21 @@ const projects = [
     "techStack": ["HTML", "CSS", "JavaScript", "Canvas"],
     "liveLink": "https://gaurav-soni24.github.io/DrawBoard/",
     "repoLink": "https://github.com/Gaurav-Soni24/DrawBoard",
+    "owner": "Gaurav Soni"
+  },
+  
+  {
+    "image": "/assets/projects/Portfolio.png",
+    "name": "My Portfolio",
+    "description": "A personal portfolio website showcasing my projects, skills, and experience.",
+    "features": [
+      "Responsive design for all devices",
+      "Interactive project gallery with project details",
+      "Contact form integrated with Web3Forms"
+    ],
+    "techStack": ["NextJS", "TypeScript", "Tailwind CSS", "Web3Forms"],
+    "liveLink": "https://gaurav-portfolio-rho.vercel.app/",
+    "repoLink": "https://github.com/Gaurav-Soni24/GauravPortfolio",
     "owner": "Gaurav Soni"
   }
 ];
