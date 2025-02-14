@@ -68,7 +68,7 @@ const projects = [
 const Projects = () => {
   return (
     <motion.div
-      className="flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 lg:px-32 py-16 text-black bg-white w-full" id="Projects"
+      className="flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 lg:px-32 py-16 text-black bg-white " id="Projects"
     >
       <motion.h1
         initial={{ opacity: 0, y: 50 }}

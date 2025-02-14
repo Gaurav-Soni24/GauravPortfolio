@@ -3,6 +3,18 @@ import { motion } from "framer-motion";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 
 const About = () => {
+
+  const handleDownload = () => {
+    const pdfUrl = '/assets/Resume.pdf';
+
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'resume.pdf'; 
+    link.click();
+  };
+
+
+
   return (
     <motion.div
       className="flex flex-col lg:flex-row justify-center items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 text-black"
@@ -101,6 +113,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
           className="w-48 mx-auto md:mx-0 text-center px-6 py-3 border-2 border-black text-black flex items-center gap-2 rounded-lg hover:bg-black hover:text-white duration-300"
+          onClick={handleDownload}
         >
           Download CV <IoCloudDownloadOutline size={24} />
         </motion.button>

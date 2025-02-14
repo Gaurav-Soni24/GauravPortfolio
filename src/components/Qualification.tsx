@@ -17,7 +17,7 @@ const qualifications: Qualification[] = [
 
 const QualificationTimeline: React.FC = () => {
   return (
-    <div className="flex flex-col items-center py-16 px-6 sm:px-12 lg:px-32 bg-white w-full" id="Qualification">
+    <div className="flex flex-col items-center py-16 px-6 sm:px-12 lg:px-32 bg-white" id="Qualification">
       <h2 className="text-4xl lg:text-6xl font-bold text-center text-black mb-12">
         My Qualifications
       </h2>

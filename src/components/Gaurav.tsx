@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <motion.div
-        className="flex flex-col lg:flex-col justify-center items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 text-black w-full" id="Gaurav"
+        className="flex flex-col lg:flex-col justify-center items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 text-black " id="Gaurav"
       >
         <div className="hidden lg:block">
           <motion.div
