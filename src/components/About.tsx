@@ -56,7 +56,7 @@ const About = () => {
         >
           {/* Medal Style Stats */}
           {[
-            { icon: "🚀", value: "4+", label: "Projects", color: "bg-yellow-500 text-yellow-600" },
+            { icon: "🚀", value: "5+", label: "Projects", color: "bg-yellow-500 text-yellow-600" },
             { icon: "💻", value: "50+", label: "Leetcode", color: "bg-blue-500 text-blue-700" },
             { icon: "🏢", value: "1+", label: "Month Experience", color: "bg-orange-500 text-orange-700" }
           ].map((item, index) => (

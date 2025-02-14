@@ -20,7 +20,7 @@ const projects = [
     liveLink: "https://air-watch-seven.vercel.app/dashboard",
     repoLink: "https://github.com/Gaurav-Soni24/AirWatch",
     owner: "Gaurav Soni",
-  }, 
+  },
   {
     "image": "/assets/projects/Quizify.png",
     "name": "Quizify",
@@ -36,13 +36,27 @@ const projects = [
     "owner": "Gaurav Soni"
   },
   {
+    "image": "/assets/projects/Portfolio.png",
+    "name": "My Portfolio",
+    "description": "A personal portfolio website showcasing my projects, skills, and experience.",
+    "features": [
+      "Responsive design for all devices",
+      "Interactive project gallery with project details",
+      "Contact form integrated with Web3Forms"
+    ],
+    "techStack": ["NextJS", "TypeScript", "Tailwind CSS", "Web3Forms"],
+    "liveLink": "https://gaurav-portfolio-rho.vercel.app/",
+    "repoLink": "https://github.com/Gaurav-Soni24/GauravPortfolio",
+    "owner": "Gaurav Soni"
+  },
+  {
     image: "/assets/projects/TextUtils.png",
     name: "TextUtils",
     description: "An Front-End Project to edit text automatically.",
     features: [
       "Text to Uppercase, Lowercase, Capitalize, Clear",
       "Copy text to clipboard",
-      "Dark mode"      
+      "Dark mode"
     ],
     techStack: ["React", "Tailwind CSS"],
     liveLink: "https://gaurav-soni24.github.io/TextUtils/",
@@ -62,6 +76,20 @@ const projects = [
     liveLink: "https://notes-on.vercel.app/",
     repoLink: "https://github.com/Gaurav-Soni24/noteson", // Replace with actual repo
     owner: "Gaurav Soni"
+  },
+  {
+    "image": "/assets/projects/DrawingBoard.png",
+    "name": "Drawing Board",
+    "description": "A simple and interactive drawing board application that allows users to draw, erase, and customize their artwork using HTML5 Canvas.",
+    "features": [
+      "Draw with different colors and brush sizes",
+      "Erase and clear the board",
+      "Responsive design for all devices"
+    ],
+    "techStack": ["HTML", "CSS", "JavaScript", "Canvas"],
+    "liveLink": "https://gaurav-soni24.github.io/DrawBoard/",
+    "repoLink": "https://github.com/Gaurav-Soni24/DrawBoard",
+    "owner": "Gaurav Soni"
   }
 ];
 
