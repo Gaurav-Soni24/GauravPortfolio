@@ -2,11 +2,33 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
+// Helper function to calculate duration dynamically
+const calculateDuration = (startDate: string, endDate: string) => {
+  const start = new Date(startDate);
+  const end = endDate.toLowerCase() === 'present' ? new Date() : new Date(endDate);
+  
+  let months = (end.getFullYear() - start.getFullYear()) * 12;
+  months -= start.getMonth();
+  months += end.getMonth();
+  months += 1; // Inclusive of the starting month
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+
+  let durationStr = '';
+  if (years > 0) durationStr += `${years} yr${years > 1 ? 's' : ''} `;
+  if (remainingMonths > 0) durationStr += `${remainingMonths} mo${remainingMonths > 1 ? 's' : ''}`;
+  
+  return durationStr.trim() || '1 mo';
+};
+
 const experiences = [
   {
     role: "React Developer Intern",
     company: "7 Seers",
-    date: "Jul 2025 – Present",
+    displayDate: "Jul 2025 – Present",
+    startDate: "2025-07-01",
+    endDate: "Present", // Automatically calculates up to the current day
     location: "Remote",
     details: [
       "Developed responsive web applications using React.js, translating high-fidelity UI/UX designs into pixel-perfect components, enhancing user retention by 15%",
@@ -17,7 +39,9 @@ const experiences = [
   {
     role: "ReactJS Intern",
     company: "Medius AI",
-    date: "March 2025 – Oct 2025",
+    displayDate: "Mar 2025 – Oct 2025",
+    startDate: "2025-03-01",
+    endDate: "2025-10-31",
     location: "Remote",
     details: [
       "Built scalable web solutions utilizing React.js and Next.js, focusing heavily on component reusability to achieve 25% faster render times",
@@ -69,7 +93,10 @@ const Experience = () => {
                 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-black/70 text-sm mb-4">
                   <div className="flex items-center gap-2">
-                    <FaCalendarAlt /> {exp.date}
+                    <FaCalendarAlt /> {exp.displayDate} 
+                    <span className="ml-1 px-2 py-0.5 bg-blue-100 text-blue-800 font-semibold rounded-full text-xs">
+                      {calculateDuration(exp.startDate, exp.endDate)}
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <FaMapMarkerAlt /> {exp.location}
