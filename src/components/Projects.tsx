@@ -103,7 +103,7 @@ const Projects = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6">Projects</motion.h1>
+        className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6">Personal Projects</motion.h1>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}

@@ -13,7 +13,7 @@ const qualifications: Qualification[] = [
   { 
     title: "Class XII", 
     institution: "Amresh Sharma Public School, Bhilai, CG", 
-    date: "July 2022", 
+    date: "July 2022 - Present", 
     percentage: "82.8%" 
   },
   { 

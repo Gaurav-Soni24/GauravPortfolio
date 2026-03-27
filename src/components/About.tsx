@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { IoCloudDownloadOutline } from "react-icons/io5";
+import { FaGithub, FaBriefcase, FaLaptopCode } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const About = () => {
 
   const handleDownload = () => {
-    // Make sure your new resume is saved at this path!
     const pdfUrl = '/assets/Resume.pdf';
 
     const link = document.createElement('a');
@@ -52,9 +53,10 @@ const About = () => {
         >
           {/* Medal Style Stats */}
           {[
-            { icon: "🚀", value: "5+", label: "Projects", color: "bg-yellow-500 text-yellow-600" },
-            { icon: "💻", value: "50+", label: "Leetcode", color: "bg-blue-500 text-blue-700" },
-            { icon: "🏢", value: "1+", label: "Year Experience", color: "bg-orange-500 text-orange-700" } // Updated to 1+ Year
+            { icon: <FaBriefcase />, value: "1+", label: "Years Exp.", bgColor: "bg-orange-500", textColor: "text-orange-600" },
+            { icon: <FaGithub />, value: "450+", label: "Contributions", bgColor: "bg-gray-800", textColor: "text-gray-900" },
+            { icon: <FaLaptopCode />, value: "5+", label: "Projects", bgColor: "bg-blue-500", textColor: "text-blue-700" },
+            { icon: <SiLeetcode />, value: "70+", label: "LeetCode", bgColor: "bg-yellow-500", textColor: "text-yellow-600" }
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -63,28 +65,32 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.6 + index * 0.2, ease: "easeOut" }}
               className="text-center flex flex-col items-center"
             >
-              <div className={`w-16 h-16 ${item.color} text-white text-4xl font-bold flex items-center justify-center rounded-full shadow-lg`}>
+              <div className={`w-16 h-16 ${item.bgColor} text-white text-3xl flex items-center justify-center rounded-full shadow-lg`}>
                 {item.icon}
               </div>
-              <h2 className={`text-3xl font-bold ${item.color.split(" ")[1]} mt-2`}>{item.value}</h2>
-              <p className="text-base text-gray-600">{item.label}</p>
+              <h2 className={`text-3xl font-bold ${item.textColor} mt-3`}>{item.value}</h2>
+              <p className="text-sm font-medium text-gray-600 mt-1">{item.label}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Intro */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="text-lg md:text-xl text-gray-800 leading-relaxed text-left md:text-left"
         >
-          I’m <span className="font-bold">Gaurav Soni</span>, a passionate web developer and problem solver.
-          Currently pursuing my B.Tech in Computer Science & Engineering at
-          <span className="font-semibold"> Government Engineering College, Bilaspur</span>.
-          I love building scalable web applications, optimizing performance, 
-          and continuously improving my skills.
-        </motion.p>
+          <p className="mb-4">
+            I’m <span className="font-bold">Gaurav Soni</span>, a passionate web developer and problem solver.
+            Currently pursuing my B.Tech in Computer Science & Engineering at
+            <span className="font-semibold"> Government Engineering College, Bilaspur</span>.
+          </p>
+          <p>
+            I have worked on many real-world projects! 
+            I love building scalable web applications, optimizing performance, and continuously improving my skills.
+          </p>
+        </motion.div>
 
         {/* Skills & Details */}
         <motion.ul
@@ -93,8 +99,8 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
           className="list-disc list-inside text-lg text-gray-700 space-y-2 text-left"
         >
-          <li>💻 Frontend: React.js, Next.js, TypeScript, Tailwind CSS</li>
-          <li>🗄️ Backend: Node.js, Express.js, MongoDB, Firestore, SQL</li>
+          <li>💻 Frontend: React.js, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS</li>
+          <li>🗄️ Backend:  Node.js, Express.js, MongoDB, Cloud Firestore, PSQL, MySQL</li>
           <li>🎓 CGPA: <span className="font-semibold">8.33</span></li>
           <li>⚡ Interested in Scalable Architectures & Open Source</li>
         </motion.ul>
@@ -104,7 +110,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-          className="w-48 mx-auto md:mx-0 text-center px-6 py-3 border-2 border-black text-black flex items-center gap-2 rounded-lg hover:bg-black hover:text-white duration-300"
+          className="w-48 mx-auto md:mx-0 text-center px-6 py-3 border-2 border-black text-black flex items-center justify-center gap-2 rounded-lg hover:bg-black hover:text-white duration-300"
           onClick={handleDownload}
         >
           Download CV <IoCloudDownloadOutline size={24} />
