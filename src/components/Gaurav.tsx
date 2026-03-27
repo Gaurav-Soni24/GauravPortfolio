@@ -165,7 +165,7 @@ const Home = () => {
 
             className="text-gray-800 text-lg sm:text-xl mt-4 text-center"
           >
-            Third-year undergraduate engineering student at Government
+            Fourth-year undergraduate engineering student at Government
             Engineering College, Bilaspur.
           </motion.p>
         </motion.div>
