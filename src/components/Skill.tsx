@@ -6,32 +6,32 @@ import "react-circular-progressbar/dist/styles.css";
 
 const Skill = () => {
     const skills = [
-        { name: "React JS", value: 85, color: "#61DAFB", description: "A JavaScript library for building user interfaces.", image: "/assets/react.png" },
-        { name: "Node JS", value: 75, color: "#68A063", description: "A runtime environment for executing JavaScript outside the browser.", image: "/assets/nodejs.png" },
-        { name: "Express JS", value: 70, color: "#444", description: "A fast, unopinionated web framework for Node.js.", image: "/assets/express.png" },
-        { name: "MongoDB", value: 78, color: "#4DB33D", description: "A NoSQL database built for modern applications.", image: "/assets/mongo.png" },
-        { name: "Firebase", value: 82, color: "#FFCA28", description: "A platform to build web and mobile applications quickly.", image: "/assets/firebase.png" },
-        { name: "Vercel", value: 78, color: "#000", description: "A hosting and deployment platform for developers.", image: "/assets/vercel.png" },
-        { name: "TailwindCSS", value: 85, color: "#38BDF8", description: "A utility-first CSS framework for modern designs.", image: "/assets/tailwind.png" },
+        { name: "React.js", value: 90, color: "#61DAFB", description: "A JavaScript library for building user interfaces.", image: "/assets/react.png" },
+        { name: "Next.js", value: 85, color: "#000000", description: "The React Framework for production-grade applications.", image: "/assets/nextjs.png" },
+        { name: "TypeScript", value: 85, color: "#3178C6", description: "A strongly typed programming language that builds on JavaScript.", image: "/assets/typescript.png" },
+        { name: "Node.js", value: 80, color: "#68A063", description: "A runtime environment for executing JavaScript outside the browser.", image: "/assets/nodejs.png" },
+        { name: "Tailwind CSS", value: 90, color: "#38BDF8", description: "A utility-first CSS framework for modern, rapid UI development.", image: "/assets/tailwind.png" },
+        { name: "MongoDB", value: 80, color: "#4DB33D", description: "A scalable NoSQL database built for modern applications.", image: "/assets/mongo.png" },
+        { name: "Firebase", value: 85, color: "#FFCA28", description: "A comprehensive platform to build web and mobile applications.", image: "/assets/firebase.png" },
         { name: "JavaScript", value: 90, color: "#F7DF1E", description: "A versatile programming language for web development.", image: "/assets/js.png" },
     ];
 
     return (
         <motion.div
             className="flex flex-col items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 "
-            id="Skill"
+            id="skills"
         >
             {/* Skill Typing Animation */}
             <div className="text-black font-extrabold text-4xl sm:text-6xl mb-12 text-center">
                 <TypeAnimation
                     sequence={[
-                        "Skills 🥇 ReactJS", 1000,
-                        "Skills 🥇 NodeJS", 1000,
-                        "Skills 🥇 ExpressJS", 1000,
+                        "Skills 🥇 React.js", 1000,
+                        "Skills 🥇 Next.js", 1000,
+                        "Skills 🥇 TypeScript", 1000,
+                        "Skills 🥇 Node.js", 1000,
+                        "Skills 🥇 Tailwind CSS", 1000,
                         "Skills 🥇 MongoDB", 1000,
                         "Skills 🥇 Firebase", 1000,
-                        "Skills 🥇 Vercel", 1000,
-                        "Skills 🥇 TailwindCSS", 1000,
                         "Skills 🥇 JavaScript", 1000,
                     ]}
                     wrapper="span"
@@ -85,13 +85,13 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
 
             {/* Skill Info Card (Dynamically Positioned) */}
             <div
-                className={`absolute  bottom-[-110px] left-1/2 transform -translate-x-1/2 p-4 rounded-lg border transition-all duration-300 w-48 sm:w-56 z-10
+                className={`absolute bottom-[-110px] left-1/2 transform -translate-x-1/2 p-4 rounded-lg border transition-all duration-300 w-48 sm:w-56 z-10
                 bg-gray-900 text-white shadow-lg shadow-gray-500/50
                 ${hover ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-90 pointer-events-none"}`}
             >
                 {/* Technology Image */}
                 <div className="flex justify-center">
-                    <img src={skill.image} alt={skill.name} className="bg-white w-14 mb-2 rounded-md shadow-md" />
+                    <img src={skill.image} alt={skill.name} className="bg-white w-14 mb-2 rounded-md shadow-md p-1" />
                 </div>
                 <h3 className="text-white font-bold text-lg text-center">{skill.name}</h3>
                 <p className="text-gray-300 text-sm text-center">{skill.description}</p>
