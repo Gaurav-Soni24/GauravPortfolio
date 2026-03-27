@@ -5,27 +5,25 @@ import { IoCloudDownloadOutline } from "react-icons/io5";
 const About = () => {
 
   const handleDownload = () => {
+    // Make sure your new resume is saved at this path!
     const pdfUrl = '/assets/Resume.pdf';
 
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'resume.pdf'; 
+    link.download = 'Gaurav_Soni_Resume.pdf'; 
     link.click();
   };
-
-
 
   return (
     <motion.div
       className="flex flex-col lg:flex-row justify-center items-center bg-white min-h-screen px-6 sm:px-12 lg:px-32 py-16 text-black"
-      id="About"
+      id="about" 
     >
       {/* About Me Text */}
       <motion.div
         initial={{ transform: "rotate(-90deg)", opacity: 0, x: -100 }}
         whileInView={{ transform: "rotate(-90deg)", opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-
         style={{ whiteSpace: "nowrap" }}
         className="hidden lg:block text-6xl md:text-8xl font-bold text-gray-900"
       >
@@ -37,7 +35,6 @@ const About = () => {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-
         className="lg:hidden text-6xl md:text-7xl font-bold text-gray-900 mb-6"
       >
         About Me
@@ -51,21 +48,19 @@ const About = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-
           className="flex justify-evenly mt-4 lg:justify-start lg:gap-9"
         >
           {/* Medal Style Stats */}
           {[
             { icon: "🚀", value: "5+", label: "Projects", color: "bg-yellow-500 text-yellow-600" },
             { icon: "💻", value: "50+", label: "Leetcode", color: "bg-blue-500 text-blue-700" },
-            { icon: "🏢", value: "1+", label: "Month Experience", color: "bg-orange-500 text-orange-700" }
+            { icon: "🏢", value: "1+", label: "Year Experience", color: "bg-orange-500 text-orange-700" } // Updated to 1+ Year
           ].map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 + index * 0.2, ease: "easeOut" }}
-
               className="text-center flex flex-col items-center"
             >
               <div className={`w-16 h-16 ${item.color} text-white text-4xl font-bold flex items-center justify-center rounded-full shadow-lg`}>
@@ -82,13 +77,12 @@ const About = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-
           className="text-lg md:text-xl text-gray-800 leading-relaxed text-left md:text-left"
         >
           I’m <span className="font-bold">Gaurav Soni</span>, a passionate web developer and problem solver.
           Currently pursuing my B.Tech in Computer Science & Engineering at
           <span className="font-semibold"> Government Engineering College, Bilaspur</span>.
-          I love building scalable web applications, solving Data Structures & Algorithms problems,
+          I love building scalable web applications, optimizing performance, 
           and continuously improving my skills.
         </motion.p>
 
@@ -97,14 +91,12 @@ const About = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-
           className="list-disc list-inside text-lg text-gray-700 space-y-2 text-left"
         >
-          <li>💻 Web Developer (React, Node.js, Express, Firebase)</li>
-          <li>📌 Problem Solving (Data Structures & Algorithms) <span className="font-bold">C++ JAVA</span></li>
+          <li>💻 Frontend: React.js, Next.js, TypeScript, Tailwind CSS</li>
+          <li>🗄️ Backend: Node.js, Express.js, MongoDB, Firestore, SQL</li>
           <li>🎓 CGPA: <span className="font-semibold">8.33</span></li>
-          <li>⚡ Interested in Open Source & AI/ML</li>
-          <li>📍 Aspiring to settle in China 🇨🇳</li>
+          <li>⚡ Interested in Scalable Architectures & Open Source</li>
         </motion.ul>
 
         {/* Download CV Button */}
