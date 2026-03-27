@@ -10,14 +10,23 @@ interface Qualification {
 }
 
 const qualifications: Qualification[] = [
-  { title: "Class 10th", institution: "Amresh Sharma Public School", date: "2020", percentage: "82.8%" },
-  { title: "Class 12th", institution: "Amresh Sharma Public School", date: "2022", percentage: "82.8%" },
-  { title: "B.Tech (CSE)", institution: "Government Engineering College, Bilaspur", date: "2022 - 2026", percentage: "8.33 CGPA" },
+  { 
+    title: "Class XII", 
+    institution: "Amresh Sharma Public School, Bhilai, CG", 
+    date: "July 2022", 
+    percentage: "82.8%" 
+  },
+  { 
+    title: "B.Tech in Computer Science and Engineering", 
+    institution: "Government Engineering College, Bilaspur, CG", 
+    date: "Oct 2022 - Sept 2026", 
+    percentage: "8.33 CGPA" 
+  },
 ];
 
 const QualificationTimeline: React.FC = () => {
   return (
-    <div className="flex flex-col items-center py-16 px-6 sm:px-12 lg:px-32 bg-white" id="Qualification">
+    <div className="flex flex-col items-center py-16 px-6 sm:px-12 lg:px-32 bg-white" id="qualification">
       <h2 className="text-4xl lg:text-6xl font-bold text-center text-black mb-12">
         My Qualifications
       </h2>
@@ -47,7 +56,7 @@ const QualificationTimeline: React.FC = () => {
                   <FaCalendarAlt className="mr-2" /> {qual.date}
                 </div>
                 <div className="flex items-center">
-                    <p className="text-black/80 text-sm mt-2">Score : {qual.percentage}</p>
+                    <p className="text-black/80 text-sm mt-2">Score : <span className="font-semibold">{qual.percentage}</span></p>
                 </div>
               </div>
             </div>
