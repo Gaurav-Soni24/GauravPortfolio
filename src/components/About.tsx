@@ -54,7 +54,7 @@ const About = () => {
           {/* Medal Style Stats */}
           {[
             { icon: <FaBriefcase />, value: "1+", label: "Years Exp.", bgColor: "bg-orange-500", textColor: "text-orange-600" },
-            { icon: <FaGithub />, value: "450+", label: "Contributions", bgColor: "bg-gray-800", textColor: "text-gray-900" },
+            { icon: <FaGithub />, value: "700+", label: "Contributions", bgColor: "bg-gray-800", textColor: "text-gray-900" },
             { icon: <FaLaptopCode />, value: "5+", label: "Projects", bgColor: "bg-blue-500", textColor: "text-blue-700" },
             { icon: <SiLeetcode />, value: "70+", label: "LeetCode", bgColor: "bg-yellow-500", textColor: "text-yellow-600" }
           ].map((item, index) => (
