@@ -20,7 +20,7 @@ const qualifications: Qualification[] = [
     title: "B.Tech in Computer Science and Engineering", 
     institution: "Government Engineering College, Bilaspur, CG", 
     date: "Oct 2022 - Sept 2026", 
-    percentage: "8.33 CGPA" 
+    percentage: "" 
   },
 ];
 
